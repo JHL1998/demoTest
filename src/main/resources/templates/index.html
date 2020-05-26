@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form action="/login" method="post">
+  <span th:text="${error2}" style="color: red"></span><br>
+  <span th:text="${error}" style="color: fuchsia"></span><br>
+  <span th:text="${empty1}" style="color: lightcoral"></span>
+  <h1>学生信息管理系统</h1>
+ 请输入用户名:
+  <input type="text" name="u_name"><br>
+  请输入密码：
+  <input type="password" name="u_pwd"><br>
+  <input type="submit" value="登录"> <a href="/ZC">注册</a>
+
+</form>
+
+</body>
+</html>

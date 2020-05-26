@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>登录成功！</title>
+
+</head>
+<body>
+<a href="/FH">返回首页</a><br><br>
+<h1>欢迎您：</h1>
+<span th:text="${session.u_name}" style="color: red"></span><br><br>
+<a href="/getbyid">按id查询信息</a>
+<a href="/getbyname">按姓名查询信息</a>
+<a href="/XG">修改信息</a>
+<a href="/ZX">注销</a>
+
+
+</body>
+</html>

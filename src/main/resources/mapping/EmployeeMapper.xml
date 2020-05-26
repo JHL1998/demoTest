@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.test.demo.mapper.DaoEmployees">
+    <select id="findAll" resultType="com.test.demo.Entity.Employee">
+        select * from  employees;
+    </select>
+    <select id="Getbyid" resultType="com.test.demo.Entity.Employee">
+        select * from  employees where u_id=#{u_id};
+    </select>
+    <select id="GetnameByid" resultType="String">
+        select u_name from  employees where u_id=#{u_id};
+    </select>
+    <insert id="Insert" parameterType="com.test.demo.Entity.Employee" >
+        insert into employees(u_name,u_pwd) values (#{u_name},#{u_pwd});
+    </insert>
+    <update id="upDate" parameterType="com.test.demo.Entity.Employee">
+        update employees set u_name=#{u_name},u_pwd=#{u_pwd} where u_name=#{u_name};
+    </update>
+    <delete id="Delete" parameterType="String">
+        delete from employees where u_name=#{u_name};
+    </delete>
+</mapper>
